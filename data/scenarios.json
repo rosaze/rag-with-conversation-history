@@ -1,0 +1,134 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "domain": "의료상담",
+      "difficulty": "medium",
+      "conversation_history": [
+        "최근 3주 동안 무릎이 아픈데, 특히 계단 오르내릴 때 심해요",
+        "나이가 50대 중반이고, 평소 운동은 거의 안 했습니다",
+        "X-ray 촬영 결과 연골 손상 초기 단계로 진단받았어요"
+      ],
+      "current_question": "연골 손상 진행을 늦추는 생활습관과 운동법을 알려주세요",
+      "expected_focus": ["연골 보호", "저강도 운동", "체중 관리", "영양 관리"],
+      "context_dependency": "high"
+    },
+    {
+      "id": 2,
+      "domain": "기술지원",
+      "difficulty": "high",
+      "conversation_history": [
+        "Python Flask 앱을 Docker로 배포하려고 하는데 에러가 납니다",
+        "requirements.txt에 Flask==2.3.0, gunicorn==20.1.0 설정했어요",
+        "Dockerfile에서 COPY . /app 후에 pip install -r requirements.txt 실행 중 에러 발생"
+      ],
+      "current_question": "Docker 빌드 시 ModuleNotFoundError: No module named '_ctypes' 에러 해결법을 알려주세요",
+      "expected_focus": ["Docker base image", "시스템 의존성", "libffi-dev", "build tools"],
+      "context_dependency": "high"
+    },
+    {
+      "id": 3,
+      "domain": "법률자문",
+      "difficulty": "high",
+      "conversation_history": [
+        "임대차 계약서에 특약사항으로 '반려동물 사육 금지'가 명시되어 있습니다",
+        "계약 후 6개월 뒤에 가족 사정으로 강아지를 키우게 되었어요",
+        "집주인이 이를 알고 계약 해지를 통보했습니다"
+      ],
+      "current_question": "특약사항 위반으로 인한 임대차계약 해지가 정당한가요? 대응 방법이 있을까요?",
+      "expected_focus": ["특약사항 효력", "신뢰관계 파괴", "임차인 보호", "협의 가능성"],
+      "context_dependency": "very_high"
+    },
+    {
+      "id": 4,
+      "domain": "투자상담",
+      "difficulty": "medium",
+      "conversation_history": [
+        "20대 후반 직장인이고 월 적금 50만원 정도 여유자금이 있어요",
+        "현재 예적금에만 투자하고 있고, 주식이나 펀드 경험은 없습니다",
+        "10년 후 집 마련을 목표로 하고 있어요"
+      ],
+      "current_question": "2024년 하반기 기준으로 초보자에게 적합한 분산투자 포트폴리오를 추천해주세요",
+      "expected_focus": ["리스크 관리", "장기투자", "분산투자", "초보자 적합성"],
+      "context_dependency": "medium"
+    },
+    {
+      "id": 5,
+      "domain": "요리레시피",
+      "difficulty": "low",
+      "conversation_history": [
+        "집에서 파스타 만들려고 하는데 토마토소스 재료가 없어요",
+        "냉장고에 양파, 마늘, 올리브오일, 파마산 치즈가 있습니다",
+        "스파게티면은 준비되어 있어요"
+      ],
+      "current_question": "토마토소스 대신 만들 수 있는 간단한 파스타 레시피 알려주세요",
+      "expected_focus": ["아글리오 올리오", "양파 활용", "마늘 볶음", "파마산 치즈"],
+      "context_dependency": "medium"
+    },
+    {
+      "id": 6,
+      "domain": "학습지도",
+      "difficulty": "medium",
+      "conversation_history": [
+        "중학교 2학년 수학에서 이차함수를 배우고 있어요",
+        "y = ax² + bx + c 형태는 이해했는데 그래프 그리기가 어려워요",
+        "꼭짓점 찾는 공식은 외웠지만 실제 적용이 어렵습니다"
+      ],
+      "current_question": "y = 2x² - 8x + 6 그래프를 단계별로 그리는 방법을 알려주세요",
+      "expected_focus": ["꼭짓점 계산", "대칭축", "y절편", "그래프 개형"],
+      "context_dependency": "high"
+    },
+    {
+      "id": 7,
+      "domain": "심리상담",
+      "difficulty": "high",
+      "conversation_history": [
+        "최근 직장에서 승진 기회를 놓쳤는데, 후배가 대신 승진했어요",
+        "객관적으로 보면 그 후배가 더 능력이 있다는 걸 인정하지만",
+        "감정적으로는 질투와 분노가 계속 올라와서 힘들어요"
+      ],
+      "current_question": "이런 질투심과 열등감을 건강하게 다루는 방법이 있을까요?",
+      "expected_focus": ["감정 수용", "인지 재구성", "자존감", "성장 마인드셋"],
+      "context_dependency": "high"
+    },
+    {
+      "id": 8,
+      "domain": "IT보안",
+      "difficulty": "high",
+      "conversation_history": [
+        "회사에서 BYOD 정책을 도입하려고 합니다",
+        "직원들이 개인 스마트폰으로 회사 이메일과 문서에 접근하게 될 예정이에요",
+        "현재 MDM 솔루션은 도입되어 있지 않은 상태입니다"
+      ],
+      "current_question": "BYOD 환경에서 데이터 유출을 방지하기 위한 보안 정책과 기술적 대책을 알려주세요",
+      "expected_focus": ["MDM", "컨테이너화", "VPN", "접근제어"],
+      "context_dependency": "high"
+    },
+    {
+      "id": 9,
+      "domain": "여행계획",
+      "difficulty": "low",
+      "conversation_history": [
+        "11월에 일본 오사카 3박 4일 여행을 계획 중이에요",
+        "오사카성, 도톤보리는 꼭 가보고 싶고요",
+        "예산은 항공료 제외하고 1인당 80만원 정도 생각하고 있어요"
+      ],
+      "current_question": "오사카에서 교토 당일치기 여행을 추가하고 싶은데, 효율적인 일정과 교통편을 추천해주세요",
+      "expected_focus": ["교토 접근성", "하루 일정", "교통패스", "주요 관광지"],
+      "context_dependency": "medium"
+    },
+    {
+      "id": 10,
+      "domain": "창업상담",
+      "difficulty": "high",
+      "conversation_history": [
+        "온라인 맞춤형 펜트하우스 플랫폼 창업을 준비 중이에요",
+        "프로그래밍 경험은 있지만 사업 경험은 없습니다",
+        "MVP는 개발했고, 베타 테스터 20명 정도 확보한 상태예요"
+      ],
+      "current_question": "투자 유치를 위한 사업계획서에서 가장 중요하게 어필해야 할 포인트는 무엇인가요?",
+      "expected_focus": ["시장 검증", "비즈니스 모델", "성장 전략", "경쟁 우위"],
+      "context_dependency": "high"
+    }
+  ]
+}
